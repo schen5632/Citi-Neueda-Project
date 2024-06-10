@@ -29,29 +29,72 @@
             <h2>Search Results</h2>
         </section>
 
+        <dialog id = login-dialog>
+            <article>
+                <form id="login-form">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="user" value="" />
+                    <label for="password">Password</label>
+                    <input type="text" id="password" name="pasword" value="" />
+                </form>
+            <form method="dialog" >
+              <button>Log in</button>
+            </form>
+
+            </article>
+                
+        </dialog>
+
+        <dialog id = buy-dialog>
+            <article>
+                <form id="sell-form">
+                    Your balance: <br>
+                    Stock: <br>
+                    Shares: <input type="number" name="" id="">
+                    Price:<br>
+                    Total:
+                </form>
+            <form method="dialog" >
+              <button style="background-color: red;">Confirm</button>
+              <button style="background-color: orange;">Cancel</button>
+            </form>
+
+            </article>
+                
+        </dialog>
+
         <section id="SearchStocks">
             <article>
                 Stock name: <br> 
-                Shares: <br>
-                Bought at: <br> 
-                Bought on: <br>
-                Price now: <br>
-                Gains/Losses: <br>
+                Price: <br>
                 <br>
-                <button>Buy</button>
+                <button class="BuyButton">Buy</button>
             </article>
             <article>
                 Stock name: <br> 
-                Shares: <br>
-                Bought at: <br> 
-                Bought on: <br>
-                Price now: <br>
-                Gains/Losses: <br>
+                Price: <br>
                 <br>
-                <button>Buy</button>
+                <button class="BuyButton">Buy</button>
             </article>
         </section>
         </main>
       </body>
 </html>
+
+<script>
+    const loginDialog = document.querySelector("#login-dialog");
+    const dialog = document.querySelector("#buy-dialog");
+    const showButton = document.querySelector(".BuyButton");
+    // const closeButton = document.querySelector("#login-dialog + button");
+
+    // "Show the dialog" button opens the dialog modally
+    showButton.addEventListener("click", () => {
+        dialog.showModal();
+        loginDialog.showModal();
+    });
+
+    
+
+</script>
+
   

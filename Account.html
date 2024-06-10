@@ -7,32 +7,47 @@
         <link rel="stylesheet" href="pico.min.css">
         <title>Account</title>
       </head>
+      
       <body>
+        
         <main class="container">
             <h1>Hello world! - Account</h1>
-        
-        <div class="navbar">
-            <ul>
-            <li><a href="stock.html">Home</a></li>
-            <li><a href="Market.html">Market</a></li>
-            </ul>
-        </div>
+            <div class="navbar">
+                <ul>
+                <li><a href="stock.html">Home</a></li>
+                <li><a href="Market.html">Market</a></li>
+                </ul>
+            </div>
+           
 
-        <dialog id="login-dialog" open modal>
-            <article>
-                <header>
-                    <button rel="prev" aria-label="Close"></button>
-                    <p>Log in</p>
-                </header>
-                <form id="login-form">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="user" value="" />
-                    <label for="password">Password</label>
-                    <input type="text" id="password" name="pasword" value="" />
-                    <input type="submit" value="Log in" />
+            <dialog id = login-dialog open>
+                <article>
+                    <form id="login-form">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="user" value="" />
+                        <label for="password">Password</label>
+                        <input type="text" id="password" name="pasword" value="" />
+                    </form>
+                <form method="dialog" >
+                  <button>Log in</button>
                 </form>
-            </article>
-        </dialog>
+
+                </article>
+                    
+            </dialog>
+
+           
+
+            <header class="container" id="main-header">
+                <hgroup>
+                    <h2>Username: </h2>
+                    <p>@blahblah</p>
+                </hgroup>
+            </header>
+        
+        
+
+        
 
         <section class="container">
             <h2>Balance</h2>
@@ -42,6 +57,22 @@
             <h2>My Stocks</h2>
         </section>
 
+        <dialog id = sell-dialog>
+            <article>
+                <form id="sell-form">
+                    Stock: <br>
+                    Shares: <input type="number" name="" id="">
+                    Price:<br>
+                    Total:
+                </form>
+            <form method="dialog" >
+              <button style="background-color: red;">Confirm</button>
+              <button style="background-color: orange;">Cancel</button>
+            </form>
+
+            </article>
+                
+        </dialog>
 
         <section id="MyStocks">
             <article>
@@ -52,7 +83,7 @@
                 Price now: <br>
                 Gains/Losses: <br>
                 <br>
-                <button>Sell</button>
+                <button class="SellButton">Sell</button>
             </article>
             <article>
                 Stock name: <br> 
@@ -62,10 +93,23 @@
                 Price now: <br>
                 Gains/Losses: <br>
                 <br>
-                <button>Sell</button>
+                <button class="SellButton">Sell</button>
             </article>
         </section>
         </main>
       </body>
 </html>
   
+<script>
+    const dialog = document.querySelector("#sell-dialog");
+    const showButton = document.querySelector(".SellButton");
+    // const closeButton = document.querySelector("#login-dialog + button");
+
+    // "Show the dialog" button opens the dialog modally
+    showButton.addEventListener("click", () => {
+    dialog.showModal();
+    });
+
+    
+
+</script>
