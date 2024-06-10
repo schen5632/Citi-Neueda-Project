@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="color-scheme" content="light dark" />
+        <link rel="stylesheet" href="pico.min.css">
+        <title>Account</title>
+      </head>
+      <body>
+        <main class="container">
+            <h1>Hello world! - Account</h1>
+        
+        <div class="navbar">
+            <ul>
+            <li><a href="stock.html">Home</a></li>
+            <li><a href="Market.html">Market</a></li>
+            </ul>
+        </div>
+
+        <dialog id="login-dialog" open modal>
+            <article>
+                <header>
+                    <button rel="prev" aria-label="Close"></button>
+                    <p>Log in</p>
+                </header>
+                <form id="login-form">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="user" value="" />
+                    <label for="password">Password</label>
+                    <input type="text" id="password" name="pasword" value="" />
+                    <input type="submit" value="Log in" />
+                </form>
+            </article>
+        </dialog>
+
+        <section class="container">
+            <h2>Balance</h2>
+            <article>$0.00</article>
+        </section>
+        <section class="container">
+            <h2>My Stocks</h2>
+        </section>
+
+
+        <section id="MyStocks">
+            <article>
+                Stock name: <br> 
+                Shares: <br>
+                Bought at: <br> 
+                Bought on: <br>
+                Price now: <br>
+                Gains/Losses: <br>
+                <br>
+                <button>Sell</button>
+            </article>
+            <article>
+                Stock name: <br> 
+                Shares: <br>
+                Bought at: <br> 
+                Bought on: <br>
+                Price now: <br>
+                Gains/Losses: <br>
+                <br>
+                <button>Sell</button>
+            </article>
+        </section>
+        </main>
+      </body>
+</html>
+  
