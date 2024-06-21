@@ -1,21 +1,32 @@
 package com.example.neuedabackend.Model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Stock {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     private double price;
     private String ticker;
     private String name;
-    int shares;
+    private int shares;
 
 
 
+    public Stock(){}
 
 
-    public Stock(String name, String ticker, double price) {
+    public Stock(String name, String ticker, double price, int shares) {
         this.name = name;
         this.ticker = ticker;
         this.price = price;
-        this.shares = 0;
+        this.shares = shares;
     }
 
     public int getShares() {
