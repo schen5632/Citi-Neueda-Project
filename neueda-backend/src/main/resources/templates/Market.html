@@ -46,39 +46,40 @@
         </dialog>
 
         <dialog id = buy-dialog>
-            <article>
-                <form id="sell-form">
-                    Your balance: <br>
-                    Stock: <br>
-                    Shares: <input type="number" name="" id="">
-                    Price:<br>
-                    Total:
-                </form>
-            <form method="dialog" >
-              <button style="background-color: red;">Confirm</button>
-              <button style="background-color: orange;">Cancel</button>
-            </form>
+<!--            <article>-->
+<!--                <form id="sell-form">-->
+<!--                    Your balance: <br>-->
+<!--                    Stock: <br>-->
+<!--                    Shares: <input type="number" name="" id="">-->
+<!--                    Price:<br>-->
+<!--                    Total:-->
+<!--                </form>-->
+<!--            <form method="dialog" >-->
+<!--              <button style="background-color: red;">Confirm</button>-->
+<!--              <button style="background-color: orange;">Cancel</button>-->
+<!--            </form>-->
 
-            </article>
+<!--            </article>-->
                 
         </dialog>
 
         <section id="SearchStocks">
-            <article>
-                Stock name: <br> 
-                Price: <br>
-                <br>
-                <button class="BuyButton">Buy</button>
-            </article>
-            <article>
-                Stock name: <br> 
-                Price: <br>
-                <br>
-                <button class="BuyButton">Buy</button>
-            </article>
+<!--            <article>-->
+<!--                Stock name: <br> -->
+<!--                Price: <br>-->
+<!--                <br>-->
+<!--                <button class="BuyButton">Buy</button>-->
+<!--            </article>-->
+<!--            <article>-->
+<!--                Stock name: <br> -->
+<!--                Price: <br>-->
+<!--                <br>-->
+<!--                <button class="BuyButton">Buy</button>-->
+<!--            </article>-->
         </section>
         </main>
       </body>
+    <script src="stock.js"></script>
 </html>
 
 <script>
@@ -89,6 +90,7 @@
 
     // "Show the dialog" button opens the dialog modally
     showButton.addEventListener("click", () => {
+        console.log("buy");
         dialog.showModal();
         loginDialog.showModal();
     });
