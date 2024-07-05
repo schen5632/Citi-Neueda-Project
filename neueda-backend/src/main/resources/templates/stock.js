@@ -19,6 +19,7 @@ function fetchData(inputValue) {
 }
 
 function displayData(data) {
+    // document.getElementById(SearchV).style.visibility = "visible";
     console.log(data);
     const dataDisplay = document.getElementById('SearchStocks');
     dataDisplay.innerHTML = ''; // Clear any existing data
