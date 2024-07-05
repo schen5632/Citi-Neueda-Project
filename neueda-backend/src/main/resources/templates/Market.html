@@ -44,7 +44,8 @@
                     <input type="text" id="password" name="pasword" value="" />
                 </form>
             <form method="dialog" >
-              <button>Log in</button>
+              <button>Log in</button>  or
+             <button style="background-color:orange;" class="CRButton">Create account</button>
             </form>
 
             </article>
@@ -52,20 +53,36 @@
         </dialog>
 
         <dialog id = buy-dialog>
-<!--            <article>-->
-<!--                <form id="sell-form">-->
-<!--                    Your balance: <br>-->
-<!--                    Stock: <br>-->
-<!--                    Shares: <input type="number" name="" id="">-->
-<!--                    Price:<br>-->
-<!--                    Total:-->
-<!--                </form>-->
-<!--            <form method="dialog" >-->
-<!--              <button style="background-color: red;">Confirm</button>-->
-<!--              <button style="background-color: orange;">Cancel</button>-->
-<!--            </form>-->
+           <article>
+               <form id="sell-form">
+                   Your balance: <br>
+                   Stock: <br>
+                   Shares: <input type="number" name="" id="">
+                   Price:<br>
+                   Total:
+               </form>
+           <form method="dialog" >
+             <button style="background-color: red;">Confirm</button>
+             <button style="background-color: orange;">Cancel</button>
+           </form>
 
-<!--            </article>-->
+           </article>
+                
+        </dialog>
+
+        <dialog id = CR-dialog>
+            <article>
+                <form id="cr-form">
+                    Email: <input type="text" id="email" name="email" value="" />
+                    Username: <input type="text" id="username" name="user" value="" />
+                    Password: <input type="text" id="pass" name="pass" value="" />
+                    Confirm Password: <input type="text" id="repass" name="repass" value="" />
+                </form>
+            <form method="dialog" >
+              <button ">Create account</button>
+            </form>
+
+            </article>
                 
         </dialog>
 
@@ -76,12 +93,12 @@
 <!--                <br>-->
 <!--                <button class="BuyButton">Buy</button>-->
 <!--            </article>-->
-<!--            <article>-->
-<!--                Stock name: <br> -->
-<!--                Price: <br>-->
-<!--                <br>-->
-<!--                <button class="BuyButton">Buy</button>-->
-<!--            </article>-->
+           <article>
+               Stock name: <br>
+               Price: <br>
+               <br>
+               <button class="BuyButton">Buy</button>
+           </article>
         </section>
         </main>
       </body>
@@ -98,10 +115,14 @@
     showButton.addEventListener("click", () => {
         console.log("buy");
         dialog.showModal();
-        loginDialog.showModal();
+        loginDialog.showModal(); 
     });
-
-    
+ 
+    const dialogCR = document.querySelector("#CR-dialog");
+    const showCRButton = document.querySelector(".CRButton");
+    showCRButton.addEventListener("click", () => {
+    dialogCR.showModal();
+    }); 
 
 </script>
 
